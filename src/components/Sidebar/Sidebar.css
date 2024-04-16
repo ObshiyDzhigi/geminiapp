@@ -3,11 +3,18 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f0f4f9;
+    background-color: #0073ff;
     padding: 25px 15px;
- 
+    transition:width 0.3s ease; /* Добавляем переход для изменения ширины */
+
+}
+.sidebar.collapsed {
+    width: 80px; /* Уменьшаем ширину сайдбара */
 }
 
+.sidebar.expanded {
+    width: 250px; /* Расширяем ширину сайдбара */
+}
 .sidebar img{
     width: 20px;
 }
@@ -22,10 +29,10 @@
     align-items: center;
     gap: 10px;
     padding: 10px 15px;
-    background-color: #e6eaf1;
+    background-color: #80aaf2;
     border-radius: 50px;
     font-size: 14px;
-    color: grey;
+    color: #ffffff;
     cursor: pointer;
 }
 .sidebar .recent{
@@ -36,6 +43,7 @@
 .sidebar .recent-title{
     margin-top: 30px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 .sidebar .recent-entry{
     display: flex;
@@ -44,12 +52,12 @@
     padding: 10px;
     padding-right: 40px;
     border-radius: 50px;
-    color: #282828;
+    color: #fdfcfc;
     cursor: pointer;
 }
 
 .sidebar .recent-entry:hover{
-    background-color: #e2e6eb;
+    background-color: #28c9f1;
 }
 
 .sidebar .bottom{
@@ -59,5 +67,6 @@
 }
 .sidebar .bottom-item{
     padding-right: 10px;
+    color: #ffffff;
     cursor: pointer;
 }

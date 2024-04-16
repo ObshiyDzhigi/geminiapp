@@ -23,6 +23,7 @@ const ContextProvider = (props) => {
     }
   const onSent = async (prompt) => {
     try {   
+      setInput("")
         setResultData(""); // prev response will be removed from the state variable
         setLoading(true);
         setShowResult(true)
@@ -31,6 +32,10 @@ const ContextProvider = (props) => {
         if (prompt !== undefined) {
             response = await runChat(prompt)
             setRecentPrompt(prompt)
+        }
+        else if(prompt){
+          setRecentPrompt(prompt);
+          response = await runChat(prompt);
         }
         else{
             setPrevPrompts(prev=>[...prev,input]);

@@ -2,6 +2,7 @@
     flex: 1;
     min-height: 100vh;
     padding-bottom: 15vh;
+    background-color: #ffffff;
     position: relative;
 }
 .main .nav{
@@ -16,21 +17,43 @@
     width: 40px;
     border-radius: 50%;
 }
-
+.main .nav span{
+    color: chocolate;
+}
 .main-container{
     max-width: 900px;
     margin: auto;
 }
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    position: relative;
+    top: 14px;
+    height: 4px;
+    width: 100%;
+    --c:no-repeat linear-gradient(#6100ee 0 0);
+    background: var(--c),var(--c),#d7b8fc;
+    background-size: 60% 100%;
+    animation: l16 3s infinite;
+  }
+  @keyframes l16 {
+    0%   {background-position:-150% 0,-150% 0}
+    66%  {background-position: 250% 0,-150% 0}
+    100% {background-position: 250% 0, 250% 0}
+  }
+@keyframes l2 {
+  100% {background-position: right -50px top 0}
+}
 .main .greet{
     margin: 50px 0px;
     font-size: 56px;
-    color: #c4c7c5;
+    color: #094764;
     font-weight: 500;
     padding: 20px;
 }
 
 .main .greet span{
-    background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+    background: -webkit-linear-gradient(16deg,#e7ac0b,#3780e7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -44,28 +67,28 @@
 .main .card{
     height: 200px;
     padding: 15px;
-    background-color: #f0f4f9;
+    background-color: #3670ef;
     border-radius: 10px;
     position: relative;
     cursor: pointer;
 }
 .main .card img{
-    width: 35px;
+    width: 50%;
     padding: 5px;
     position: absolute;
     background-color: #fff;
     border-radius: 20px;
     bottom: 10px;
-    right: 10px;
+    left: 25%;
 }
 
 
 .main .card p{
-    color: #585858;
+    color: #ffffff;
     font-size: 17px;
 }
 .main .card:hover{
-    background-color: #dfe4ea;
+    transform: scale(1.1);
 }
 .main-bottom{
     position: absolute;
@@ -138,22 +161,6 @@
     gap: 20px;
 }
 
-.loader{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.loader hr{
-    border-radius:4px;
-    border: none;
-    background-color: #f6f7f8;
-    background: linear-gradient(to right, #9ed7ff,#ffffff,#9ed7ff);
-    background-size: 800px 50px;
-    height: 20px;
-    animation: loader 3s infinite linear;
-}
 
 @keyframes loader{
     0%{
