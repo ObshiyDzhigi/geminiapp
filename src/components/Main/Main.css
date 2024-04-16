@@ -177,3 +177,41 @@
     font-weight: 300;
     line-height: 1.8;
 }
+
+@media (max-width:926px){
+   .main .cards{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:600px){
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+    .search-box div{
+        gap: 5px;
+    }
+}
+@media (max-width:420px){
+    .bottom-info{
+        display: none;
+    }
+    .main .cards{
+        margin-bottom: 0px;
+    }
+    .main-bottom{
+        padding-bottom: 25px;
+    }
+}
+@media (max-width:414px){
+    .main .card img{
+        width: 120px;
+        left: 33%;
+    }  
+}
